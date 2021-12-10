@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //스프레드 연산자
+      const a = [1, 2, 3, 4]
+      const b = [...a]
+      b.push(5)
+      console.log(b)
+
+      //filter 삭제할때
+      const a3 = [1, 2, 3, 4]
+      const b3 = a3.filter(n => {
+        return n != 1
+      }) //bool을 return 받는다 ->true만 걸러낸다
+      console.log(b3)
+
+      //잘라내기
+      const a4 = [1, 2, 3]
+      const b4 = a4.slice(0, 2)
+      console.log(b4)
+
+      //map 뿌려준다
+      const a5 = [1, 2, 3, 4, 5]
+      const b5 = a5.map(i => {
+        return i + 10
+      })
+      console.log(b5)
+
+      const c = { id: 1, name: '김동원' }
+      const h = { ...c, id: 2, name: '서혜민' }
+      console.log(h)
+
+      const user = [
+        { id: 1, name: '김동원', age: 28 },
+        { id: 2, name: '서혜민', age: 28 },
+        { id: 3, name: '닭둘기', age: 17 },
+      ]
+      const newUser = user.map(i => i)
+      console.log('newUser', newUser)
+    </script>
+  </body>
+</html>
